@@ -1,0 +1,1 @@
+The good burger sequel. This time taking full advantage of the power of sequel-ization (nodejs library).
