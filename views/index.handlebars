@@ -5,7 +5,10 @@
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
-      {{> burgers/burgers-block devoured=true}}
+      <li>
+        {{burgername}}
+        <button class="change-devoured" data-id="{{id}}" data-newburger="{{devoured}}">	EAT ME ! </button>
+      </li>
     {{/unless}}
   {{/each}}
 </ul>
@@ -15,7 +18,10 @@
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burgers-block devoured=false}}
+    <li>
+      {{burgername}}
+      <button class="delete-burger" data-id="{{id}}"> DELETE!</button>
+    </li>
     {{/if}}
   {{/each}}
 </ul>
