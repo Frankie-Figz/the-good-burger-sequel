@@ -1,10 +1,16 @@
 module.exports = function(sequelize,DataTypes){
-    var sequelize = require("../config/connection.js");
+    // var sequelize = require("../config/connection.js");
 
     var Burgers = sequelize.define("Burgers",{
-        name: {type: DataTypes.STRING, allowNull: false},
-        devoured: {type: DataTypes.BOOLEAN, defaultValue: false, allowNull: false},
-        createdAt: {type: DataTypes.TIMESTAMP, defaultValue: Timestamp.now()}
+        // Giving the burgername a type string
+        burgername: {
+            type: DataTypes.STRING
+        },
+        // Set the devour state of the burger to true or false
+        devoured: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: 0
+            }
     });
     
     return Burgers;
