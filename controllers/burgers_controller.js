@@ -24,10 +24,10 @@ module.exports = function(app){
     console.log(req.body);
   
     db.Burgers.create({
-      burgername:  req.body.burgername
+      burgername: req.body.burgername
     }).then(function(dbTodo){
       console.log("I am here ");
-      console.log(dbTodo.dataValues.id);
+      console.log(dbTodo.dataValues.burgername);
       console.log("This is where I am needed");
       res.json(dbTodo);
     });
